@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="66T-fl-KnR">
-                                <rect key="frame" x="140" y="70" width="134" height="482"/>
+                                <rect key="frame" x="93" y="26" width="134" height="482"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYv-6m-PQR">
                                         <rect key="frame" x="0.0" y="0.0" width="134" height="134"/>
@@ -40,7 +40,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcK-jf-jyX">
-                                <rect key="frame" x="121" y="693" width="172" height="55"/>
+                                <rect key="frame" x="74" y="464" width="172" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="7Gr-Ig-wO7"/>
@@ -50,6 +50,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="LaY-CY-c23"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,16 +60,22 @@
                         <constraints>
                             <constraint firstItem="kcK-jf-jyX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J8K-aE-aCm"/>
                             <constraint firstItem="kcK-jf-jyX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vqv-j3-cde"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kcK-jf-jyX" secondAttribute="bottom" constant="114" id="WNS-Ef-sXB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kcK-jf-jyX" secondAttribute="bottom" constant="49" id="fUO-jI-IC9"/>
                             <constraint firstItem="66T-fl-KnR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gnH-Vs-jbV"/>
                             <constraint firstItem="66T-fl-KnR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="nOs-b7-NIz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kcK-jf-jyX" secondAttribute="trailing" id="wMN-0K-YKs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="kcK-jf-jyX" id="BOd-fb-lPA"/>
+                        <outlet property="greenLight" destination="2jf-mZ-iFB" id="cQn-a7-weH"/>
+                        <outlet property="redLight" destination="aYv-6m-PQR" id="ZEA-p9-4LB"/>
+                        <outlet property="yellowLight" destination="Rfl-6S-5mz" id="qca-d3-ePR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+            <point key="canvasLocation" x="33.75" y="83.450704225352112"/>
         </scene>
     </scenes>
     <resources>
